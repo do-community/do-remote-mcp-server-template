@@ -123,6 +123,14 @@ Add the following configuration to the appropriate file, making sure to point to
    pip install -r requirements.txt
    ```
 
+## Optional CI hardening
+
+If you want a small optional GitHub Actions example for repos created from this template, see
+`.github/workflows/mcp-trust.yml`.
+
+It scans `python local-domain-checker.py`, uploads SARIF to GitHub code scanning, and stays
+`workflow_dispatch`-only by default so it does not add a required CI gate.
+
 ## Deploy to DigitalOcean App Platform
 
 This MCP server can be deployed as a remote MCP server on DigitalOcean App Platform.
